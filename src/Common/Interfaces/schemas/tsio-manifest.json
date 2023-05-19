@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the mod, no spaces. Allowed characters: a-z A-Z 0-9 _",
+      "pattern": "^[a-zA-Z0-9_]+$"
+    },
+    "author": {
+      "type": "string",
+      "description": "Author Name"
+    },
+    "version_number": {
+      "type": "string",
+      "description": "Version number of the mod, following the semantic version format Major.Minor.Patch.",
+      "pattern": "^[0-9]+.[0-9]+.[0-9]+$"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "URL of the mod's website (e.g. GitHub repo). Can be an empty string.",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string",
+      "description": "A short description of the mod, shown on the mod list. Max 250 characters.",
+      "maxLength": 250
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "List of other packages that are required for this package to function",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "$schema",
+    "name",
+    "version_number",
+    "website_url",
+    "description",
+    "dependencies"
+  ]
+}

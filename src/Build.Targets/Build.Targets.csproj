@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+    <!-- <AssemblyName>DMF.Common.Extensions</AssemblyName> -->
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+    <LangVersion>10</LangVersion>
+    <PackageId>DMF.Build.Targets</PackageId>
+    <!-- <RootNamespace>DMF.Common.Extensions</RootNamespace>		 -->
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+		<Copyright>Copyright © Digitalroot Technologies 2021 - 2023</Copyright>
+    <PackageProjectUrl>https://github.com/Digitalroot-Valheim/DMF</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Digitalroot-Valheim/DMF</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageIcon>ValheimRcon_black.png</PackageIcon>
+		<PackageIconUrl />
+		<PackageTags>valheim, digitalroot, build targets</PackageTags>
+		<Authors>Digitalroot</Authors>
+		<Company>Digitalroot Technologies</Company>
+    <Product>Digitalroot Modding Framework - Build Targets</Product>
+    <Description>Build Targets for Digitalroot mods</Description>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+		<NeutralLanguage>en-US</NeutralLanguage>
+    <VersionPrefix>1.0.21</VersionPrefix>
+    <RestoreAdditionalProjectSources>
+      https://nuget.bepinex.dev/v3/index.json;
+      https://digitalroot-valheim-nuget.s3.us-west-2.amazonaws.com/index.json
+    </RestoreAdditionalProjectSources>
+		<MinClientVersion>5.11.0</MinClientVersion>
+    <DebugType>none</DebugType>
+    <IsPublishable>false</IsPublishable>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\ico\ValheimRcon_black.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+    <None Include="build\DMF.Build.Targets.props">
+      <Pack>True</Pack>
+      <PackagePath>build</PackagePath>
+    </None>
+    <None Include="lib\netstandard2.0\_._">
+      <Pack>True</Pack>
+      <PackagePath>lib\netstandard2.0</PackagePath>
+    </None>
+    <None Include="lib\net462\_._">
+      <Pack>True</Pack>
+      <PackagePath>lib\net462</PackagePath>
+    </None>
+	</ItemGroup>
+</Project>

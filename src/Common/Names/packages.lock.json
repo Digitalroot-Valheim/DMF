@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.6.2": {
+      "Digitalroot.Valheim.Common.References": {
+        "type": "Direct",
+        "requested": "[0.214.305, )",
+        "resolved": "0.214.305",
+        "contentHash": "h/l4OcGiJ9dl9DrN2ji6KnfCexjvK1mAqmjCqKVkMldkScIfG4QAXBiRlgrdCb2rNWhG8tvo52Oce4lKwmD3XA=="
+      },
+      "fastJSON": {
+        "type": "Transitive",
+        "resolved": "2.4.0.4",
+        "contentHash": "lbxY+miTOvCNbNfOk8HcbmBD9F6wv2dRKZlMjtJBm6rjA5vFKXBYtR6eoIe96HnCHOE1nCJbMsaZDKGNPg5mIA=="
+      },
+      "DMF.Common.Json": {
+        "type": "Project",
+        "dependencies": {
+          "Digitalroot.Valheim.Common.References": "[0.214.305, )",
+          "fastJSON": "[2.4.0.4, )"
+        }
+      },
+      "DMF.Common.Log": {
+        "type": "Project",
+        "dependencies": {
+          "DMF.Common.Json": "[1.0.0, )"
+        }
+      },
+      "DMF.Common.Utils": {
+        "type": "Project",
+        "dependencies": {
+          "DMF.Common.Log": "[1.0.0, )",
+          "Digitalroot.Valheim.Common.References": "[0.214.305, )"
+        }
+      }
+    }
+  }
+}
