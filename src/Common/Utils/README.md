@@ -1,5 +1,10 @@
-# Digitalroot.Valheim.Utils
+# Summary
 Utils for Valheim Mods
+
+### Issues/Questions/Bugs
+- Use the repo issues tab above.
+
+### Support Me @ https://www.buymeacoffee.com/digitalroot
 
 <br />
 <p align="center">
