@@ -49,8 +49,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Json\Json.csproj" />
-  </ItemGroup>
-
 </Project>
