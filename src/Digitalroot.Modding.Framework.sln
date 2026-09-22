@@ -14,7 +14,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{E64D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{1960DCD1-3C51-48FF-BFF8-5FE4C3CBABB2}"
 	ProjectSection(SolutionItems) = preProject
-		..\.github\workflows\discord.yml = ..\.github\workflows\discord.yml
 		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
 	EndProjectSection
 EndProject
@@ -25,10 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{28344659-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ico", "ico", "{C66A8E3B-31DB-4296-9DF3-78F55E2580E5}"
 	ProjectSection(SolutionItems) = preProject
-		ico\icon.png = ico\icon.png
-		ico\icon_greendot.gif = ico\icon_greendot.gif
-		ico\icon_reddot.gif = ico\icon_reddot.gif
-		ico\icon_yellowdot.gif = ico\icon_yellowdot.gif
 		ico\ValheimRcon.xcf = ico\ValheimRcon.xcf
 		ico\ValheimRcon_black.ico = ico\ValheimRcon_black.ico
 		ico\ValheimRcon_black.png = ico\ValheimRcon_black.png
@@ -36,11 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ico", "ico", "{C66A8E3B-31D
 		ico\ValheimRcon_color.png = ico\ValheimRcon_color.png
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C247CA2A-FD07-4160-B7A5-C2B4F9C0A7B3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{85F41C39-6314-44DD-BD76-07771B8ECE9D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Common\Utils\Utils.csproj", "{F6587B66-7241-400E-A4B9-82D982A50D2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digitalroot.Modding.Framework", "Digitalroot.Modding.Framework\Digitalroot.Modding.Framework.csproj", "{59A20AFF-0244-4FF1-A677-9A93CA25CEEE}"
 EndProject
@@ -54,10 +45,6 @@ Global
 		{85F41C39-6314-44DD-BD76-07771B8ECE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85F41C39-6314-44DD-BD76-07771B8ECE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85F41C39-6314-44DD-BD76-07771B8ECE9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6587B66-7241-400E-A4B9-82D982A50D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6587B66-7241-400E-A4B9-82D982A50D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6587B66-7241-400E-A4B9-82D982A50D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6587B66-7241-400E-A4B9-82D982A50D2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{59A20AFF-0244-4FF1-A677-9A93CA25CEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{59A20AFF-0244-4FF1-A677-9A93CA25CEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59A20AFF-0244-4FF1-A677-9A93CA25CEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,7 +58,6 @@ Global
 		{1960DCD1-3C51-48FF-BFF8-5FE4C3CBABB2} = {E64D67E6-C2B6-471C-990D-2E9A91427B64}
 		{28344659-BF34-4411-9C48-A3D5C9AFA98E} = {E5C5D2B9-639B-48CF-B5B0-E44FD7F24B1E}
 		{C66A8E3B-31DB-4296-9DF3-78F55E2580E5} = {E5C5D2B9-639B-48CF-B5B0-E44FD7F24B1E}
-		{F6587B66-7241-400E-A4B9-82D982A50D2A} = {C247CA2A-FD07-4160-B7A5-C2B4F9C0A7B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46DD4389-95C4-4F57-BB16-2A9A816F46B9}

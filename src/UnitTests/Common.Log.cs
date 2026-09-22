@@ -1,5 +1,5 @@
 using BepInEx;
-using DMF.Common;
+using Digitalroot.Modding.Framework.Logging;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

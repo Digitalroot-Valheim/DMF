@@ -3,16 +3,16 @@
   <PropertyGroup>
     <TargetFrameworks>net48</TargetFrameworks>
     <LangVersion>10</LangVersion>
-    <PackageId>Digitalroot.Modding.Framework</PackageId>
+    <PackageId>Digitalroot.Valheim.Modding.Framework</PackageId>
     <RootNamespace>Digitalroot.Modding.Framework</RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <Copyright>Copyright © Digitalroot Technologies 2021 - 2026</Copyright>
-    <PackageProjectUrl>https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.Common.Json</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.Common.Json</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Digitalroot-Valheim/DMF</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Digitalroot-Valheim/DMF</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageIcon>ValheimRcon_black.png</PackageIcon>
+    <PackageIcon>ValheimRcon_color.png</PackageIcon>
     <PackageIconUrl />
     <PackageTags>valheim, digitalroot</PackageTags>
     <Authors>Digitalroot</Authors>
@@ -31,6 +31,9 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://digitalroot-valheim-nuget.s3.us-west-2.amazonaws.com/index.json
     </RestoreAdditionalProjectSources>
+    <Title>Digitalroot Valheim Modding Framework</Title>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|AnyCPU'">
@@ -44,9 +47,35 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\ico\ValheimRcon_black.png">
+    <Compile Include="Common\Config\AbstractConfigProvider.cs.bak" />
+    <Compile Include="Common\Config\ConfigEntryBaseExtension.cs.bak" />
+    <Compile Include="Common\Config\ConfigFileExtension.cs.bak" />
+    <Compile Include="Common\Config\ConfigProviderFactory.cs.bak" />
+    <Compile Include="Common\Config\ConfigProviderSettings.cs.bak" />
+    <Compile Include="Common\Config\ConfigProviderType.cs.bak" />
+    <Compile Include="Common\Config\Providers\AbstractProxyCustomSyncedValue.cs.bak" />
+    <Compile Include="Common\Config\Providers\BepInEx\AbstractBepInExConfigProvider.cs.bak" />
+    <Compile Include="Common\Config\Providers\BepInEx\BepInExFileBasedConfigProvider.cs.bak" />
+    <Compile Include="Common\Config\Providers\BepInEx\BepInExInMemoryBasedConfigProvider.cs.bak" />
+    <Compile Include="Common\Config\Providers\JvL\JvLConfigProvider.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSyncConfigProvider.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\ConfigSync.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\CustomSyncedValue.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\CustomSyncedValueBase.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\OwnConfigEntryBase.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\ServerSyncProxyCustomSyncedValue.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\SyncedConfigEntry.cs.bak" />
+    <Compile Include="Common\Config\Providers\ServerSync\VersionCheck.cs.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\ico\ValheimRcon_color.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+    </None>
+    <None Include="build\Digitalroot.Valheim.Build.Targets.props">
+      <Pack>True</Pack>
+      <PackagePath>build</PackagePath>
     </None>
   </ItemGroup>
 
@@ -55,24 +84,13 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Digitalroot.References.Unity" Version="6000.0.75" />
-    <PackageReference Include="Digitalroot.Valheim.Common.References" Version="1.0.12">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Digitalroot.Valheim.References.JvL" Version="2.30.0">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Digitalroot.Valheim.Common.References" Version="1.0.15" />
+    <PackageReference Include="Digitalroot.Valheim.References.JvL" Version="2.30.1" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="System.Net.Http" />
   </ItemGroup>
-
   <ItemGroup>
-    <Folder Include="Names\SpawnThatMod\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
-
 </Project>

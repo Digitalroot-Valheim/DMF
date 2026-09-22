@@ -1,4 +1,4 @@
-using DMF.Common.Json;
+using Digitalroot.Modding.Framework.Common.Json;
 using NUnit.Framework;
 
 namespace UnitTests
@@ -18,7 +18,7 @@ namespace UnitTests
     public void ToJsonTest()
     {
       var obj = new UnitTestJsonClass();
-      var json = JsonSerializationProvider.ToJson(obj);
+      var json = JsonSerializationProvider.Serialize(obj);
       Assert.That(json, Is.Not.Empty);
       Assert.That(json, Is.EqualTo(jsonRef));
     }
@@ -26,7 +26,7 @@ namespace UnitTests
     [Test(Author = "Digitalroot", Description = "Tests JSON to object.", TestOf = typeof(JsonSerializationProvider)), Timeout(5000)]
     public void FromJsonTest()
     {
-      var obj = JsonSerializationProvider.FromJson<UnitTestJsonClass>(jsonRef);
+      var obj = JsonSerializationProvider.Deserialize<UnitTestJsonClass>(jsonRef);
       Assert.That(obj, Is.Not.Null);
       Assert.That(obj.Int, Is.EqualTo(9999));
       Assert.That(obj.String, Is.EqualTo("String"));
@@ -34,9 +34,12 @@ namespace UnitTests
 
     private class UnitTestJsonClass
     {
+      // ReSharper disable once FieldCanBeMadeReadOnly.Local
       public string String;
+      // ReSharper disable once FieldCanBeMadeReadOnly.Local
       public int Int;
 
+      // ReSharper disable once ConvertConstructorToMemberInitializers
       public UnitTestJsonClass()
       {
         String = nameof(String);

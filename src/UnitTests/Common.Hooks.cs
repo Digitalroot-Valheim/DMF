@@ -1,4 +1,4 @@
-using DMF.Common.Hooks;
+using Digitalroot.Modding.Framework.Common.Hooks;
 using NUnit.Framework;
 
 namespace UnitTests
@@ -16,7 +16,7 @@ namespace UnitTests
       TraderHooks.Instance.BeforeStart += OnBeforeStart;
     }
 
-    private void OnBeforeStart(TraderEventArgs eventargs)
+    private void OnBeforeStart(TraderEventArgs eventArgs)
     {
       throw new System.NotImplementedException();
     }
