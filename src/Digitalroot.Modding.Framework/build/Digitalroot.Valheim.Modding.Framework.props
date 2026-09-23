@@ -19,9 +19,10 @@
       <DigitalrootBuildFiles Include="$(TargetDir)..\$(ProjectName)\$(ProjectName)\$(ProjectName).dll" />
       <DigitalrootTSIOFiles Include="$(ProjectDir).ts\*.*" />
       <DigitalrootReadMeFile Include="$(SolutionDir)..\docs\README.md" />
+      <DigitalrootChangeLogFile Include="$(SolutionDir)..\docs\CHANGELOG.md" />
       <DigitalrootLicenseFile Include="$(SolutionDir)..\LICENSE" />
       <DigitalrootOutputFile Include="$(TargetDir)$(ProjectName).dll" />
-      <DigitalrootOutputAssets Include="$(TargetDir)Assets\**\*.*" />
+      <DigitalrootOutputAssets Include="$(TargetDir)Assets\Translations\**\*.*" />
     </ItemGroup>
   </Target>
 
@@ -32,7 +33,8 @@
     <Message Text="Copying assemblies to C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\$(ProjectName)\" Importance="high" />
     <CallTarget Targets="RefreshVars" />
     <Message Text="DigitalrootOutputFile = @(DigitalrootOutputFile)" Importance="high" />
-    <Copy SourceFiles="@(DigitalrootOutputFile)" DestinationFiles="@(DigitalrootOutputFile->'C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\$(ProjectName)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+    <Copy SourceFiles="@(DigitalrootOutputFile)"   DestinationFiles="@(DigitalrootOutputFile->'C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\$(ProjectName)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+    <Copy SourceFiles="@(DigitalrootOutputAssets)" DestinationFiles="@(DigitalrootOutputAssets->'C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins\$(ProjectName)\Assets\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
     <Message Text="+--------------------------------------------------------------+" Importance="high" />
   </Target>
 
@@ -42,9 +44,6 @@
     <Message Text="PostBuild (Release) Called" Importance="high" />
     <CallTarget Targets="RefreshVars" />
     <MakeDir Directories="$(TargetDir)..\$(ProjectName)\$(ProjectName)" />
-    <!-- <When Condition="!Exists('$(TargetDir)..\$(ProjectName)\$(ProjectName)\Assets')"> -->
-      <!-- <MakeDir Directories="$(TargetDir)..\$(ProjectName)\$(ProjectName)\Assets" /> -->
-    <!-- </When> -->
     <Message Text="Deleting files from $(TargetDir)..\$(ProjectName)" Importance="high" />
     <Delete Files="$(TargetDir)..\$(ProjectName)\**\*.*" />
     <Message Text="Copying @(DigitalrootOutputFile) to $(TargetDir)..\$(ProjectName)\$(ProjectName)" Importance="high" />
@@ -74,7 +73,8 @@
     <Copy SourceFiles="@(DigitalrootOutputFile)" DestinationFiles="@(DigitalrootOutputFile->'$(TargetDir)..\$(ProjectName)TS\plugins\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" />
     <Message Text="Copying @(DigitalrootTSIOFiles) to $(TargetDir)..\$(ProjectName)TS" Importance="high" />
     <Copy SourceFiles="@(DigitalrootTSIOFiles)" DestinationFiles="@(DigitalrootTSIOFiles->'$(TargetDir)..\$(ProjectName)TS\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" />
-    <Copy SourceFiles="@(DigitalrootReadMeFile)" DestinationFiles="@(DigitalrootReadMeFile->'$(TargetDir)..\$(ProjectName)TS\%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" />
+    <Copy SourceFiles="@(DigitalrootReadMeFile)" DestinationFiles="@(DigitalrootReadMeFile->'$(TargetDir)..\$(ProjectName)TS\%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Condition="Exists('@(DigitalrootReadMeFile)')" />
+    <Copy SourceFiles="@(DigitalrootChangeLogFile)" DestinationFiles="@(DigitalrootChangeLogFile->'$(TargetDir)..\$(ProjectName)TS\%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Condition="Exists('@(DigitalrootChangeLogFile)')" />
     <Copy SourceFiles="@(DigitalrootLicenseFile)" DestinationFiles="@(DigitalrootLicenseFile->'$(TargetDir)..\$(ProjectName)TS\plugins\%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" />
     <Message Text="Copying Assets @(DigitalrootOutputAssets) to $(TargetDir)..\TS\plugins\Assets" Importance="high" />
     <Copy SourceFiles="@(DigitalrootOutputAssets)" DestinationFiles="@(DigitalrootOutputAssets->'$(TargetDir)..\$(ProjectName)TS\plugins\Assets\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" />    
