@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+
 namespace Digitalroot.Modding.Framework.Names.Vanilla;
 
 public static partial class NpcNames
