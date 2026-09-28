@@ -1851,6 +1851,7 @@ namespace Digitalroot.Modding.Framework.Names.Vanilla
         public const string PieceSharpstakes = "piece_sharpstakes";
         public const string PieceShieldgenerator = "piece_shieldgenerator";
         public const string PieceSpinningwheel = "piece_spinningwheel";
+        public const string PieceSnowlantern = "piece_snowlantern";
         public const string PieceStakewallBlackwood = "piece_stakewall_blackwood";
         public const string PieceStonecutter = "piece_stonecutter";
         public const string PieceTable = "piece_table";
