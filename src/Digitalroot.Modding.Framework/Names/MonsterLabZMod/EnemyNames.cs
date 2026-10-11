@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Digitalroot.Modding.Framework.Names.MonsterLabZMod
@@ -8,7 +8,7 @@ namespace Digitalroot.Modding.Framework.Names.MonsterLabZMod
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class EnemyNames
   {
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(EnemyNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(EnemyNames));
 
     public static readonly string BlackSpider = PrefabNames.BlackSpider;
     public static readonly string BrownSpider = PrefabNames.BrownSpider;
@@ -22,7 +22,9 @@ namespace Digitalroot.Modding.Framework.Names.MonsterLabZMod
     public static readonly string GoblinLoot = PrefabNames.GoblinLoot;
     public static readonly string GoblinShamanNew = PrefabNames.GoblinShamanNew;
     public static readonly string GoblinShip2 = PrefabNames.GoblinShip2;
+    // ReSharper disable once IdentifierTypo
     public static readonly string GreydwarfPurple = PrefabNames.GreydwarfPurple;
+    // ReSharper disable once IdentifierTypo
     public static readonly string GreydwarfPurpleShroom = PrefabNames.GreydwarfPurpleShroom;
     public static readonly string GreenSpider = PrefabNames.GreenSpider;
     public static readonly string IceGolem = PrefabNames.IceGolem;

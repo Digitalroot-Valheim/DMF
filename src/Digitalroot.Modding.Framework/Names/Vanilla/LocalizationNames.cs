@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable UnusedMember.Global
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla
@@ -7,7 +7,7 @@ namespace Digitalroot.Modding.Framework.Names.Vanilla
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class LocalizationNames
   {
-    public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(LocalizationNames));
+    public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(LocalizationNames));
     public static readonly string English = nameof(English);
     public static readonly string Abenaki = nameof(Abenaki);
     public static readonly string Bulgarian = nameof(Bulgarian);

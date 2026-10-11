@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable IdentifierTypo
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla
@@ -7,7 +7,7 @@ namespace Digitalroot.Modding.Framework.Names.Vanilla
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class LocationNames
   {
-    public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(LocationNames));
+    public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(LocationNames));
     public static readonly string AbandonedLogCabin02 = PrefabNames.AbandonedLogCabin02;
     public static readonly string AbandonedLogCabin03 = PrefabNames.AbandonedLogCabin03;
     public static readonly string AbandonedLogCabin04 = PrefabNames.AbandonedLogCabin04;

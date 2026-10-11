@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
 // ReSharper disable MemberCanBePrivate.Global
 
@@ -9,11 +9,13 @@ namespace Digitalroot.Modding.Framework.Names.RRRMod
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class EnemyNames
   {
-    public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(EnemyNames));
+    public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(EnemyNames));
     public static readonly string TrollTosser = PrefabNames.TrollTosser;
     // ReSharper disable once InconsistentNaming
+    // ReSharper disable once IdentifierTypo
     public static readonly string GDThornweaver = PrefabNames.GDThornweaver;
     public static readonly string GhostVengeful = PrefabNames.GhostVengeful;
+    // ReSharper disable once IdentifierTypo
     public static readonly string Grig = PrefabNames.Grig;
 
     [UsedImplicitly]

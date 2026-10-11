@@ -1,13 +1,13 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
 namespace Digitalroot.Modding.Framework.Names.MonsterLabZMod
 {
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class PrefabNames
   {
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(PrefabNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(PrefabNames));
     public static readonly string BlackSpider = nameof(BlackSpider);
     public static readonly string BrownSpider = nameof(BrownSpider);
     public static readonly string FireGolem = nameof(FireGolem);
@@ -20,7 +20,9 @@ namespace Digitalroot.Modding.Framework.Names.MonsterLabZMod
     public static readonly string GoblinLoot = nameof(GoblinLoot);
     public static readonly string GoblinShamanNew = nameof(GoblinShamanNew);
     public static readonly string GoblinShip2 = nameof(GoblinShip2);
+    // ReSharper disable once IdentifierTypo
     public const string GreydwarfPurple = "Greydwarf_Purple";
+    // ReSharper disable once IdentifierTypo
     public const string GreydwarfPurpleShroom = "Greydwarf_Purple_Shroom";
     public static readonly string GreenSpider = nameof(GreenSpider);
     public static readonly string IceGolem = nameof(IceGolem);

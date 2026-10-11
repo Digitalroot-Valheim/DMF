@@ -1,21 +1,25 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable MemberCanBePrivate.Global
 
+// ReSharper disable once IdentifierTypo
 namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
 {
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class BossNames
   {
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(BossNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(BossNames));
     public static readonly string BlazingDamnedOne = PrefabNames.BlazingDamnedOne;
     public static readonly string DamnedOne = PrefabNames.DamnedOne;
+    // ReSharper disable once IdentifierTypo
     public static readonly string DevourerFenring = PrefabNames.DevourerFenring;
     public static readonly string ForgottenOne = PrefabNames.ForgottenOne;
     public static readonly string Jotunn = PrefabNames.Jotunn;
     public static readonly string MotherDarkSpider = PrefabNames.MotherDarkSpider;
+    // ReSharper disable once IdentifierTypo
     public static readonly string StormFenring = PrefabNames.StormFenring;
+    // ReSharper disable once IdentifierTypo
     public static readonly string SvartalfrQueen = PrefabNames.SvartalfrQueen;
 
     [UsedImplicitly]

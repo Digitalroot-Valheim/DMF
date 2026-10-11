@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla
 {
-    public static partial class PrefabNames
+  // ReSharper disable once PartialTypeWithSinglePart
+  public static partial class PrefabNames
     {
-        public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(PrefabNames));
+        public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(PrefabNames));
         public const string EventzoneBossBase = "_eventzone_boss_base";
         public const string TerrainCompiler = "_TerrainCompiler";
         public const string ZoneCtrl = "_ZoneCtrl";

@@ -16,7 +16,7 @@ namespace Digitalroot.Modding.Framework.Logging
       EnableTrace = enableTrace;
     }
 
-    public static StaticSourceLogger PreMadeTraceableInstance = new(true);
+    public static readonly StaticSourceLogger PreMadeTraceableInstance = new(true);
     public static StaticSourceLogger PreMadeNonTraceableInstance = new();
 
     #region Implementation of ITraceableLogging

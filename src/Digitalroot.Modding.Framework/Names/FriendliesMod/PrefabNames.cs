@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
 namespace Digitalroot.Modding.Framework.Names.FriendliesMod
 {
@@ -9,7 +9,7 @@ namespace Digitalroot.Modding.Framework.Names.FriendliesMod
   {
     private const string PrefixNpc = "RRRN_";
     
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(PrefabNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(PrefabNames));
 
     public static readonly string Ashe = $"{PrefixNpc}{nameof(Ashe)}";
     public static readonly string DarkWolf = nameof(DarkWolf);

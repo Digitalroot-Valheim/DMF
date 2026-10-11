@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla
@@ -8,7 +8,7 @@ namespace Digitalroot.Modding.Framework.Names.Vanilla
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class BossNames
   {
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(BossNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(BossNames));
     public static readonly string Eikthyr = PrefabNames.Eikthyr;
     public static readonly string TheElder = PrefabNames.GdKing;
     public static readonly string Bonemass = PrefabNames.Bonemass;
@@ -18,6 +18,7 @@ namespace Digitalroot.Modding.Framework.Names.Vanilla
     public static readonly string DragonQueen = PrefabNames.Dragonqueen;
     public static readonly string Fader = PrefabNames.Fader; // Boss??
 
+    [UsedImplicitly]
     public static IEnumerable<string> AllNamesByBiome(Heightmap.Biome biome)
     {
       switch (biome)

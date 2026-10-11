@@ -1,7 +1,8 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
+// ReSharper disable once IdentifierTypo
 namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
 {
   // ReSharper disable once PartialTypeWithSinglePart
@@ -9,8 +10,9 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
   {
     private const string PrefixM = "RRRM_";
     private const string PrefixNpc = "RRRN_";
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(PrefabNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(PrefabNames));
 
+    // ReSharper disable once CommentTypo
     // Ashlands
     public static readonly string AshHatchling = $"{PrefixM}{nameof(AshHatchling)}";
     public static readonly string AshMosquito = $"{PrefixM}{nameof(AshMosquito)}";
@@ -18,8 +20,9 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
     public static readonly string BlazingBones = $"{PrefixM}{nameof(BlazingBones)}";
     public static readonly string BlazingDamnedOne = $"{PrefixM}{nameof(BlazingDamnedOne)}"; // Fire
     public static readonly string BurnedBones = $"{PrefixM}{nameof(BurnedBones)}";
-    public static readonly string DamnedOne = $"{PrefixM}{nameof(DamnedOne)}"; // Poisen
+    public static readonly string DamnedOne = $"{PrefixM}{nameof(DamnedOne)}"; // Poison
     
+    // ReSharper disable once IdentifierTypo
     public static readonly string ElderSurtling = $"{PrefixM}{nameof(ElderSurtling)}";
     public static readonly string SmallAshNeck = $"{PrefixM}{nameof(SmallAshNeck)}";
     public static readonly string SwollenBody = $"{PrefixM}{nameof(SwollenBody)}";
@@ -28,12 +31,18 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
     public static readonly string AngrySpirit = $"{PrefixM}{nameof(AngrySpirit)}";
     public static readonly string AngryFrozenCorpse = $"{PrefixM}{nameof(AngryFrozenCorpse)}";
     public static readonly string CalmSpirit = $"{PrefixM}{nameof(CalmSpirit)}";
+    // ReSharper disable once IdentifierTypo
     public static readonly string DevourerFenring = $"{PrefixM}{nameof(DevourerFenring)}"; // Ice
+    // ReSharper disable once IdentifierTypo
     public static readonly string Dvergr = $"{PrefixNpc}{nameof(Dvergr)}";
+    #pragma warning disable IDE0051
+    // ReSharper disable once IdentifierTypo
     public static readonly string DvergrEvent = $"{PrefixNpc}{nameof(DvergrEvent)}";
+    #pragma warning restore IDE0051
     public static readonly string ForgottenOne = $"{PrefixM}{nameof(ForgottenOne)}"; // Ice
     public static readonly string FrozenCorpse = $"{PrefixM}{nameof(FrozenCorpse)}";
     public static readonly string Jotunn = $"{PrefixM}{nameof(Jotunn)}";
+    // ReSharper disable once IdentifierTypo
     public static readonly string PolarFenring = $"{PrefixM}{nameof(PolarFenring)}";
     public static readonly string PolarLox = $"{PrefixM}{nameof(PolarLox)}";
     public static readonly string SilverGolem = $"{PrefixM}{nameof(SilverGolem)}";
@@ -47,12 +56,14 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
     public static readonly string MotherDarkSpider = $"{PrefixM}{nameof(MotherDarkSpider)}";
     public static readonly string PoisonDarkSpider = $"{PrefixM}{nameof(PoisonDarkSpider)}";
     public static readonly string SmallDarkSpider = $"{PrefixM}{nameof(SmallDarkSpider)}";
+    // ReSharper disable IdentifierTypo
     public static readonly string Svartalfr = $"{PrefixNpc}{nameof(Svartalfr)}";
     public static readonly string SvartalfrArcher = $"{PrefixNpc}{nameof(SvartalfrArcher)}";
     public static readonly string SvartalfrBrigade = $"{PrefixNpc}{nameof(SvartalfrBrigade)}";
     public static readonly string SvartalfrMage = $"{PrefixNpc}{nameof(SvartalfrMage)}";
     public static readonly string SvartalfrHeavy = $"{PrefixNpc}{nameof(SvartalfrHeavy)}";
     public static readonly string SvartalfrQueen = $"{PrefixNpc}{nameof(SvartalfrQueen)}";
+    // ReSharper restore IdentifierTypo
 
     // Ocean
     public static readonly string DrownedSoul = $"{PrefixM}{nameof(DrownedSoul)}";
@@ -60,6 +71,7 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
     
     // Other
     public static readonly string StormWolf = $"{PrefixM}{nameof(StormWolf)}";
+    // ReSharper disable once IdentifierTypo
     public static readonly string StormFenring = $"{PrefixM}{nameof(StormFenring)}";
   }
 }

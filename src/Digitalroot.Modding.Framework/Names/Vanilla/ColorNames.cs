@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using Digitalroot.Modding.Framework.Utils;
+using System.Collections.Generic;
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla;
 
 public static partial class ColorNames
 {
-  public static readonly IEnumerable<string> AllNames = Utils.Utils.ReflectionUtils.AllNames(typeof(ColorNames));
+  public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(ColorNames));
   public static readonly string Black = "black";
   public static readonly string Blue = "blue";
   public static readonly string Green = "green";

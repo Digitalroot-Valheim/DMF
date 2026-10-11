@@ -1,15 +1,16 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
 // ReSharper disable MemberCanBePrivate.Global
 
+// ReSharper disable once IdentifierTypo
 namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
 {
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class EnemyNames
   {
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(EnemyNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(EnemyNames));
     public static readonly string AngrySpirit = PrefabNames.AngrySpirit;
     public static readonly string AngryFrozenCorpse = PrefabNames.AngryFrozenCorpse;
     public static readonly string AshHatchling = PrefabNames.AshHatchling;
@@ -20,10 +21,13 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
     public static readonly string DarkMosquito = PrefabNames.DarkMosquito;
     public static readonly string DarkProtector = PrefabNames.DarkProtector;
     public static readonly string DarkSpider = PrefabNames.DarkSpider;
+    // ReSharper disable once IdentifierTypo
     public static readonly string Dvergr = PrefabNames.Dvergr;
+    // ReSharper disable once IdentifierTypo
     public static readonly string ElderSurtling = PrefabNames.ElderSurtling;
     public static readonly string FrozenCorpse = PrefabNames.FrozenCorpse;
     public static readonly string PoisonDarkSpider = PrefabNames.PoisonDarkSpider;
+    // ReSharper disable once IdentifierTypo
     public static readonly string PolarFenring = PrefabNames.PolarFenring;
     public static readonly string PolarLox = PrefabNames.PolarLox;
     public static readonly string DrownedSoul = PrefabNames.DrownedSoul;
@@ -36,10 +40,15 @@ namespace Digitalroot.Modding.Framework.Names.MonsternomiconMod
     public static readonly string SwollenBody = PrefabNames.SwollenBody;
     public static readonly string StormWolf = PrefabNames.StormWolf;
     public static readonly string BurnedBones = PrefabNames.BurnedBones;
+    // ReSharper disable once IdentifierTypo
     public static readonly string Svartalfr = PrefabNames.Svartalfr;
+    // ReSharper disable once IdentifierTypo
     public static readonly string SvartalfrArcher = PrefabNames.SvartalfrArcher;
+    // ReSharper disable once IdentifierTypo
     public static readonly string SvartalfrMage = PrefabNames.SvartalfrMage;
+    // ReSharper disable once IdentifierTypo
     public static readonly string SvartalfrHeavy = PrefabNames.SvartalfrHeavy;
+    // ReSharper disable once IdentifierTypo
     public static readonly string SvartalfrBrigade = PrefabNames.SvartalfrBrigade;
 
     [UsedImplicitly]

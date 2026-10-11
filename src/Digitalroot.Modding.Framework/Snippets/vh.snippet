@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://microsoft.com">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Valheim Method Template</Title>
+            <Shortcut>cwh</Shortcut>
+            <Description>Code snippet for wrapping Valheim Mod Methods</Description>
+            <Author>Digitalroot</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>System</Namespace>
+                </Import>
+                <Import>
+                    <Namespace>System.Reflection</Namespace>
+                </Import>
+            </Imports>
+            <Code Language="csharp">
+                <![CDATA[try
+{
+    Log.Trace(Instance, $$"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
+    $end$
+}
+catch (Exception e)
+{
+    Log.Error(Instance, e);
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

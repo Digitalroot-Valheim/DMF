@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Digitalroot.Modding.Framework.Names.SupplementalRaidsMod
@@ -8,7 +8,8 @@ namespace Digitalroot.Modding.Framework.Names.SupplementalRaidsMod
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class EnemyNames
   {
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(EnemyNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(EnemyNames));
+    // ReSharper disable once IdentifierTypo
     public static readonly string DeathsquitoT1 = PrefabNames.DeathsquitoT1;
     public static readonly string EikthyrBoar = PrefabNames.EikthyrBoar;
     public static readonly string EikthyrNeck = PrefabNames.EikthyrNeck;

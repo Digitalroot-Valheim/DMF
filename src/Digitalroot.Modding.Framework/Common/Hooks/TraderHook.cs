@@ -1,8 +1,8 @@
 ﻿using Digitalroot.Modding.Framework.Logging;
+using Digitalroot.Modding.Framework.Utils;
 using HarmonyLib;
 using System;
 using System.Reflection;
-using static Digitalroot.Modding.Framework.Utils.Utils;
 
 namespace Digitalroot.Modding.Framework.Common.Hooks
 {

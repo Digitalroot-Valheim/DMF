@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable IdentifierTypo
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla
@@ -7,7 +7,7 @@ namespace Digitalroot.Modding.Framework.Names.Vanilla
   // ReSharper disable once PartialTypeWithSinglePart
   public static partial class ItemDropNames
   {
-    public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(ItemDropNames));
+    public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(ItemDropNames));
     public static string Acorn = PrefabNames.Acorn;
     public static string Amber = PrefabNames.Amber;
     public static string AmberPearl = PrefabNames.AmberPearl;

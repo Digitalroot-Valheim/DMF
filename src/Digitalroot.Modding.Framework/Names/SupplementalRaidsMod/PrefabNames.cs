@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 // ReSharper disable StringLiteralTypo
 
 namespace Digitalroot.Modding.Framework.Names.SupplementalRaidsMod
@@ -10,7 +10,8 @@ namespace Digitalroot.Modding.Framework.Names.SupplementalRaidsMod
   {
     private const string PrefixM = "RRRM_";
     private const string PrefixNpc = "RRRN_";
-    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(PrefabNames));
+    [UsedImplicitly] public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(PrefabNames));
+    // ReSharper disable once IdentifierTypo
     public static readonly string DeathsquitoT1 = $"{PrefixM}{nameof(DeathsquitoT1)}";
     public static readonly string EikthyrBoar = $"{PrefixM}{nameof(EikthyrBoar)}";
     public static readonly string EikthyrLox = $"{PrefixM}{nameof(EikthyrLox)}";

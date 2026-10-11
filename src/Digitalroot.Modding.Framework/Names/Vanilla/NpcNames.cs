@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using DMF_Utils = Digitalroot.Modding.Framework.Utils.Utils;
+using Digitalroot.Modding.Framework.Utils;
 
 namespace Digitalroot.Modding.Framework.Names.Vanilla;
 
 public static partial class NpcNames
 {
-  public static readonly IEnumerable<string> AllNames = DMF_Utils.ReflectionUtils.AllNames(typeof(NpcNames));
+  public static readonly IEnumerable<string> AllNames = ReflectionUtils.AllNames(typeof(NpcNames));
   public static readonly string Haldor = PrefabNames.Haldor;
   public static readonly string Hildir = PrefabNames.Hildir;
   public static readonly string BogWitch = PrefabNames.BogWitch;
