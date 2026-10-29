@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -38,11 +39,13 @@ namespace Digitalroot.Modding.Framework.Common.Attributes
     /// <summary>
     /// Metadata
     /// </summary>
+    [UsedImplicitly]
     public List<AiInfoMetaData> AiInfoMetaData { get; } = new();
 
     /// <summary>
     /// Note
     /// </summary>
+    [UsedImplicitly]
     public string Note { get; }
   }
 
@@ -53,16 +56,16 @@ namespace Digitalroot.Modding.Framework.Common.Attributes
     /// <summary>
     /// No Ai used.
     /// </summary>
-    None = 0, 
+    [UsedImplicitly] None = 0, 
     
     /// <summary>
     /// Ai assisted/advised in the creation.
     /// </summary>
-    Ai_Assisted,
+    [UsedImplicitly] Ai_Assisted,
 
     /// <summary>
     /// Ai generated code.
     /// </summary>
-    Ai_Generated
+    [UsedImplicitly] Ai_Generated
   }
 }

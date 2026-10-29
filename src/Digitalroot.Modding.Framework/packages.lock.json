@@ -20,9 +20,9 @@
       },
       "Digitalroot.Valheim.Common.References": {
         "type": "Direct",
-        "requested": "[1.0.21, )",
-        "resolved": "1.0.21",
-        "contentHash": "uR6fJxgJZW0fBeuhwpgd/kdRxgx9NXBdPhV7aVO3nFmtu9jPUgXThATua5PdHqLGsji75sT24AQtatdI0koFyQ=="
+        "requested": "[1.0.22, )",
+        "resolved": "1.0.22",
+        "contentHash": "3WhiEF3Ez9DOmu2l+yh0L+4CRehg8UOtGjOQyBwtlNWUcqLylUsVqHGFEl+6YR7aKx8NZEDPcdfEAMklqU/D+w=="
       },
       "Digitalroot.Valheim.References.JvL": {
         "type": "Direct",
