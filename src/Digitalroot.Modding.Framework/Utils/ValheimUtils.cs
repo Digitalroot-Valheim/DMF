@@ -74,6 +74,45 @@ public static class ValheimUtils
   [UsedImplicitly]
   public static GameObject GetPrefab(int hash) => IsZNetSceneReady() ? ZNetScene.instance.GetPrefab(hash) : null;
 
+  /// <summary>
+  /// Handles Renaming Config Files
+  /// </summary>
+  /// <param name="configFilePath">Current config file path</param>
+  /// <param name="oldConfigFileName">Old config file name to target to rename</param>
+  /// <returns>True when the old config file has been renamed. Plug-in should <see cref="BaseUnityPlugin.Config.Reload()"/> it's config.</returns>
+  [UsedImplicitly]
+  public static bool HandleConfigFileRename(string configFilePath, string oldConfigFileName)
+  {
+    try
+    {
+      if (string.IsNullOrWhiteSpace(configFilePath) || string.IsNullOrWhiteSpace(oldConfigFileName)) return false;
+
+      var configFileInfo = new FileInfo(configFilePath);
+      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"Config.ConfigFilePath: '{configFilePath}'");
+      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"Config.ConfigFilePath: '{configFileInfo.Name}'");
+      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"configFileInfo.Exists: {configFileInfo.Exists}");
+      if (configFileInfo.Exists) return false;
+
+      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"BepInEx.Paths.ConfigPath: '{BepInEx.Paths.ConfigPath}'");
+      var oldConfigFilePath = Path.Combine(BepInEx.Paths.ConfigPath, oldConfigFileName);
+      var oldConfigFileInfo = new FileInfo(oldConfigFilePath);
+      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"oldConfigFileInfo.Exists: {oldConfigFileInfo.Exists}");
+      if (oldConfigFileInfo.Exists)
+      {
+        // Old config file exists. Rename it and reload.
+        Log.Info(StaticSourceLogger.PreMadeNonTraceableInstance, $"Moving '{oldConfigFileInfo.Name}' to '{configFileInfo.Name}'");
+        oldConfigFileInfo.MoveTo(configFilePath);
+        return true;
+      }
+    }
+    catch (Exception e)
+    {
+      Log.Error(StaticSourceLogger.PreMadeNonTraceableInstance, e);
+    }
+
+    return false;
+  }
+
   [UsedImplicitly]
   public static bool IsGameInMainScene() => ZNetScene.instance != null;
 
