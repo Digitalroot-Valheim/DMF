@@ -79,24 +79,29 @@ public static class ValheimUtils
   /// </summary>
   /// <param name="configFilePath">Current config file path</param>
   /// <param name="oldConfigFileName">Old config file name to target to rename</param>
+  /// <param name="sender">Plugin</param>
   /// <returns>True when the old config file has been renamed. Plug-in should <see cref="BaseUnityPlugin.Config.Reload()"/> it's config.</returns>
   [UsedImplicitly]
-  public static bool HandleConfigFileRename(string configFilePath, string oldConfigFileName)
+  public static bool HandleConfigFileRename(string configFilePath, string oldConfigFileName, ITraceableLogging sender)
   {
     try
     {
       if (string.IsNullOrWhiteSpace(configFilePath) || string.IsNullOrWhiteSpace(oldConfigFileName)) return false;
 
       var configFileInfo = new FileInfo(configFilePath);
-      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"Config.ConfigFilePath: '{configFilePath}'");
-      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"Config.ConfigFilePath: '{configFileInfo.Name}'");
-      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"configFileInfo.Exists: {configFileInfo.Exists}");
+      if (sender.EnableTrace)
+      {
+        Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"Config.ConfigFilePath: '{configFilePath}'");
+        Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"Config.ConfigFilePath: '{configFileInfo.Name}'");
+        Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"configFileInfo.Exists: {configFileInfo.Exists}");
+      }
+      
       if (configFileInfo.Exists) return false;
 
-      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"BepInEx.Paths.ConfigPath: '{BepInEx.Paths.ConfigPath}'");
+      if (sender.EnableTrace) Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"BepInEx.Paths.ConfigPath: '{BepInEx.Paths.ConfigPath}'");
       var oldConfigFilePath = Path.Combine(BepInEx.Paths.ConfigPath, oldConfigFileName);
       var oldConfigFileInfo = new FileInfo(oldConfigFilePath);
-      Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"oldConfigFileInfo.Exists: {oldConfigFileInfo.Exists}");
+      if (sender.EnableTrace) Log.Trace(StaticSourceLogger.PreMadeTraceableInstance, $"oldConfigFileInfo.Exists: {oldConfigFileInfo.Exists}");
       if (oldConfigFileInfo.Exists)
       {
         // Old config file exists. Rename it and reload.
